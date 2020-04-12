@@ -1,0 +1,130 @@
+body {
+  background-color: lightgrey;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.image1 {
+  height: 30rem;
+  width: 100%;
+  background-image: url("images/dragon2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image2 {
+  height: 30rem;
+  background-image: url("images/winterIsComing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.westeros {
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.ironThrone {
+  height: 30rem;
+  width: auto;
+  float: right;
+  margin-bottom: 2rem;
+}
+
+.mapTitle {
+  margin-top: 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+img {
+  padding: 0 0 0 1rem;
+  margin-top: 7px;
+}
+
+.kingsLanding {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 0;
+  margin-top: 3rem;
+}
+
+span {
+  width: 50%;
+  margin: auto;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #5d4954;
+}
+
+.logo {
+  color: rgb(226, 226, 226);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.nav-links a:hover {
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+.imageLeft {
+  float: left;
+  padding: 0 1rem 0.5rem 0;
+  max-height: 20rem;
+}
+
+.imageRight {
+  float: right;
+  padding: 0 0 0.5rem 1rem;
+  max-height: 20rem;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+section {
+  margin-bottom: 3rem;
+  min-height: 22rem;
+}

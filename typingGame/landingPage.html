@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="landing.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Typing Game</title>
+  </head>
+  <body class="landingBody">
+    <div class="header wide">Jake's Magnificent Typing Game</div>
+    <div class="quoteChooserContainer wide">
+      <div class="quoteBanner">Select Desired Run-Count</div>
+      <button type="button" class="btn" onclick="selectNumber5(this)">
+        5 Runs
+      </button>
+      <button type="button" class="btn" onclick="selectNumber10(this)">
+        10 Runs
+      </button>
+      <button type="button" class="btn" onclick="selectNumber20(this)">
+        20 Runs
+      </button>
+      <a href="index.html" style="text-align: center;" class="startLink"
+        ><button type="button" class="startBtn">Start!</button></a
+      >
+    </div>
+    <div class="footer wide" style="display: block;">
+      <a href="stats.html"
+        ><button type="button" class="stats" id="stat1">View Stats</button></a
+      >
+      <button type="button" class="stats" onclick="clearStats()" id="stat2">
+        Clear Stats
+      </button>
+      <a href="../index.html"
+        ><button type="button" class="stats" id="homeLink">Home</button></a
+      >
+    </div>
+  </body>
+</html>

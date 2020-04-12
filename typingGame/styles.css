@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    132deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#statAudio {
+  position: absolute;
+  top: 75%;
+}
+
+.indexBody {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.landingBody {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.statsBody {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  top: 10rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 700px;
+  max-width: 90%;
+  height: auto;
+}
+
+.timer {
+  position: absolute;
+  top: 2rem;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
+
+.quote-display {
+  margin-bottom: 1rem;
+  margin-left: calc(1rem + 2px);
+  margin-right: calc(1rem + 2px);
+}
+
+.quote-input {
+  background-color: transparent;
+  border: 2px solid lightgrey;
+  outline: none;
+  width: 100%;
+  height: 8rem;
+  margin: auto;
+  resize: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.quote-input:focus {
+  border-color: black;
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: underline;
+}
+
+.statsArea {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.invisible {
+  display: none;
+}
+
+.nextBtn {
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+  border-radius: 7px;
+  /* padding: 5px 20px 5px 20px; */
+  padding: 0px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.wide {
+  width: 80vw;
+  display: block;
+  margin: auto;
+}
+
+.quoteChooserContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  width: 5rem;
+  margin: 1rem 0 1rem 0;
+  align-self: center;
+  padding: 5px 20px 5px 20px;
+  min-width: 10rem;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: red;
+  color: black;
+}
+
+.startBtn {
+  width: 10rem;
+  color: white;
+  background-color: lightgreen;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 1rem 0 1rem 0;
+}
+
+.startLink {
+  width: 10rem;
+  margin: auto;
+}
+
+.startBtn:hover {
+  color: black;
+}
+
+.header {
+  color: white;
+  font-size: 55px;
+  margin-top: 2em;
+}
+
+.quoteBanner {
+  color: white;
+  margin-top: 4rem;
+  font-size: 25px;
+}
+
+.stats {
+  width: 10rem;
+  color: white;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 5rem 0 1rem 0;
+}
+
+#stat1 {
+  background-color: orange;
+  margin-right: 1rem;
+}
+#stat1:hover {
+  color: black;
+  border: 1px solid white;
+}
+
+#stat2 {
+  background-color: red;
+  margin-left: 1rem;
+}
+
+#homeLink {
+  margin-left: 2rem;
+  background-color: lightgreen;
+}
+
+#homeLink:hover {
+  color: black;
+}
+
+#stat2:hover {
+  background-color: orange;
+  color: black;
+}
+
+.scoreDiv {
+  font-size: 20px;
+  padding: 0;
+}
+
+.scoreContainer {
+  max-width: 20rem;
+  align-self: center;
+}
+
+.highscoreBanner {
+  font-size: 25px;
+  font-weight: bold;
+  /* margin-top: 3rem; */
+}
+
+.userScoreDiv {
+  font-size: 20px;
+  margin-top: 1em;
+}
+
+.spacerDiv {
+  margin-bottom: 2rem;
+}
+
+.homeButton {
+  position: absolute;
+  top: 29rem;
+  border-radius: 5px;
+  background-color: lightgreen;
+  color: white;
+  font-size: 25px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6rem;
+  cursor: pointer;
+}

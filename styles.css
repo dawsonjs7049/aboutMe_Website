@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: rgb(25, 25, 87);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+  z-index: 100;
+  opacity: .96;
+}
+
+.headerTitles {
+  color: white;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -5rem;
+  visibility: hidden;
+}
+
+#nameSpan {
+ line-height: 5rem;
+ vertical-align: middle;
+ font-size: 30px;
+ color: white;
+ margin-left: 24px;
+}
+
+#aboutMe {
+  margin-top: 6rem;
+}
+
+main {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footerSpan {
+  height: 50px;
+  padding-top: 13px;
+}
+
+.header-container {
+  height: 100%;
+}
+
+.tabs_container {
+  background-color: white;
+  min-height: 40rem;
+}
+
+.about-me {
+  background-color: white;
+  border: 2pt solid black;
+}
+
+.inputs {
+  width: 6rem;
+}
+
+#contact-btn {
+  position: absolute;
+  right: 24px;
+  top: 1.3rem;
+}
+
+.cover {
+  height: 20rem;
+  width: auto;
+  border: 2px solid darkslategray;
+}
+
+.pics {
+  background-color: white;
+  padding: 2rem 0;
+  border: 2pt solid black;
+}
+
+.card {
+  border: 2px solid darkslategray;
+}
+
+.projectPics {
+  height: auto;
+  width: 90%;
+  border: 2px solid darkslategray;
+}
+
+.cols {
+  margin-top: 4rem;
+  padding: 0 !important;
+}
+
+.topImgs {
+  height: 80%;
+  width: auto;
+  max-height: 250px;
+}
+
+.about-me img {
+  margin: auto;
+  display: block;
+}
+
+#dropdownLinks {
+  position: absolute;
+  top: 1.3rem;
+  right: 9.5rem;
+}
+
+#packersImage {
+  border: 2pt solid darkslategray;
+}
+
+@media only screen and (max-width: 550px) {
+  #aboutMe {
+    margin-top: 8rem;
+  }
+
+  #nameSpan {
+    width: 100vw;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  #dropdownLinks {
+    display: none;
+  }
+
+  #contact-btn {
+    position: relative;
+    width: calc(100vw - 48px);
+    margin: auto;
+    margin-left: 48px;
+  }
+
+  .header-row {
+    background-color: #343A40;
+    height: 5rem;
+  }
+
+  .projectPics {
+    width: 100%;
+  }
+
+  .footerSpan {
+    height: 70px;
+  }
+
+  .headerTitles {
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .cover {
+    width: 75%;
+    height: auto;
+  }
+
+  #secondDiv {
+    padding-top: 2rem;
+  }
+
+  #packersImage {
+    margin-top: 1rem;
+  }
+
+  #uwecLogo {
+    margin-top: 1rem;
+  }
+}

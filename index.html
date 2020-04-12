@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel = "stylesheet" href = "./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5ed70d4ecf.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Jake Dawson - Web Development</title>
+
+    <script>
+        function sendEmail(){
+            window.onscroll = function () { window.scrollTo(0, 0); };
+
+            setTimeout(function(){
+                window.onscroll = function () {};
+            }, 200);
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if(name !== "" && email !== "" && message !== "") {
+                $('#contactModal').modal('hide');
+
+                Email.send({
+                    SecureToken : "3eeddee9-882b-4535-9aca-6a172e267976",
+                    To : "jake906@charter.net",
+                    From : "contactJakeDawson@gmail.com",
+                    Subject : "Message From Website",
+                    Body : "Message submitted by " + name + " with contact email of: " + email + ". \n Message is: \n" + message
+                }).then (
+                    message => window.alert("You're message has been sent!")
+                )
+            } else {
+            
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class = "header-container container-fluid m-0 p-0 bg-dark">
+            <div id="nameSpan" class="bg-dark">&lt; Jake Dawson &gt;</div>
+            <div class = "header-row text-center m-0 p-0">
+                <div class="dropdown show" id = "dropdownLinks">
+                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Navigate
+                    </a>
+                    
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#anchor1">About Me</a>
+                        <a class="dropdown-item" href="#anchor2">Projects</a>
+                        <a class="dropdown-item" href="#anchor3">Books</a>
+                    </div>
+                </div>
+                <button type="button" id = "contact-btn" class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
+                   Contact Me
+                </button>
+            </span>
+        </div>
+    </header>
+    <main class = "px-4">
+        <div class = "about-me-container section mb-5 mt-4">
+            <a class="anchor" id="anchor1">&nbsp;</a>
+            <h2 class="headerTitles" id = "aboutMe">Who Am I?</h2>
+
+            <div class = "about-me px-3 py-2">
+                <div class = "container-fluid">
+                    <div class = "row py-4">
+                        <div class = "col-md-6 my-auto">
+                            <p>
+                                Hey there, my name is Jake Dawson. I'm a recent graduate from the University of Wisconsin - Eau Claire with a bachelor's degree in Software Engineering and a minor in Physics currently looking for a job in the web-development field.
+                                In academics, I've always been most interested in STEM fields like robotics and natural sciences, though
+                                throughout my years in college I've taken an interest in fields ranging from World History, to Circuits,
+                                to Software Development. After my first C++ class, I knew that the software field was the field for me.
+                                After starting the program, I've had experience developing software in languages such as Java, C, C++, Ruby,
+                                Scheme, and even some low-level MIPS. 
+                            </p>
+                        </div>
+                        <div class = "col-md-6 text-center my-auto">
+                            <img src = "images/UWEC_Logo.png" class = "topImgs" id = "uwecLogo" alt = "picture of uwec logo">
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class = "container-fluid">
+                    <div class = "row py-4">
+                        <div class = "col-md-6 text-center my-auto">
+                            <img src = "images/html.png" class = "topImgs" id = "htmlLogo" alt = "picture of uwec logo">
+                        </div>
+                        <div class = "col-md-6 my-auto" id = "secondDiv">
+                            <p>
+                                The area I found the most enjoyment in was web-development. Learning HTML, JavaScript, CSS, 
+                                and some PHP that brings designs to life right before your eyes is one of the most satisfying areas I've come 
+                                across in the whole of my journey so far. In addition to the education received at my University, I've
+                                also dabbled with developing simple iOS apps and spent time on learning some different web technologies like
+                                Bootstrap, as well as some different web-development tricks like lightboxes. Visual design for user interfaces
+                                is easily my favorite area of Computer Science so far; its a super interesting mix of art and technology that
+                                is fun to develop and use.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class = "container-fluid">
+                    <div class = "row py-4">
+                        <div class = "col-md-6 my-auto">
+                            <p>
+                                Beyond academics and software in general, my biggest passions are reading in the fantasy genre,
+                                all things involving the Green Bay Packers, and obsessing over anything to do with outer space. I could talk all day
+                                about some of my favorite authors' works, from Game of Thrones to the Stormlight Archive to classics like Dune! Of the Packers, I could 
+                                ramble on about Packers like Reggie White (aka "The Minister of Defense!"), Donald Driver,
+                                Brett Favre, Jordy Nelson, Charles Woodson, and of course Aaron Rodgers. Hopefully, you've gleaned a good image of me from 
+                                these descriptions, please feel free to contact me via the above "Contact Me" button or directly through 
+                                the means provided at the bottom of the page!
+                            </p>
+                        </div>
+                        <div class = "col-md-6 text-center my-auto">
+                            <img src = "images/charlesWoodson.jpg" class = "topImgs" id = "packersImage" alt = "picture of uwec logo">
+                            <h6 class = "mt-2"><em>Image by Joe Hamilton</em></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">            
+            <a class="anchor" id="anchor2">&nbsp;</a>
+            <h2 class="headerTitles" id = "projects">Projects</h2>
+            <div class = "tabs_container pt-3 px-3" style = "border: 2px solid black;">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">iOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Resume</a>
+                    </li>
+                    </ul>
+                    <div class="tab-content py-3" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <p class = "pt-1">
+                                Throughout my education at UWEC, I've worked on many different projects in many different languages. In C, I have experience with
+                                bitshifting and checksum programs as well as compression algorithms like Huffman compression. In C++,
+                                I've worked on file sending with encryption/decryption over networks and simple game-like programs that simulate disease outbreak.
+                                In Java, I've done the most work with projects like autograding software that compiles and grades student code,
+                                implementing algorithms like Breadth-First-Search and Depth-First-Search, and working on code in projects for Wisconsin Public 
+                                Broadcasting like Election Tracker. In the web-sphere, I've worked on developing clean and professional front-end focused
+                                projects, as well as database integration with mySQL. More projects and assignments could be mentioned, but this is a good 
+                                representation of the type of work I've accomplished at UWEC and in my own time. 
+                            </p>
+                            <div class = "container-fluid">
+                                <div class = "row text-center">
+                                    <div class = "col-xl-4 mb-3 cols">
+                                        <span><h5>Java autograding program GUI</h5></span>
+                                        <img class="rounded projectPics p-0" src="./images/AutograderScreenshot2.png" alt="autograder screenshot GUI">
+                                    </div>
+                                    <div class = "col-xl-4 mb-3 cols">
+                                        <span><h5>GOT Fan Website - Click to Visit!</h5></span>
+                                        <a href="gameOfThrones/thrones1.html" target="_blank"><img class="rounded projectPics" src="./images/webScreenshot.png" alt="website screenshot"></a>
+                                    </div>
+                                    <div class = "col-xl-4 mb-3 cols">
+                                        <span><h5>C++ file encryption/decryption code</h5></span>
+                                        <img class="rounded projectPics" src="./images/encryptScreenshot.png" alt="encrypt/decrypt program screenshot">
+                                    </div>
+                                    <div class = "col-xl-4 mb-3 cols">
+                                        <span><h5>Typing Game - Click to Try!</h5></span>
+                                        <a href="typingGame/landingPage.html"><img class="rounded projectPics" src="./images/typingGame.png" alt="encrypt/decrypt program screenshot"></a>
+                                    </div>
+                                    <div class = "col-xl-4 mb-3 cols">
+                                        <span><h5>A Coronavirus Tracker - Click to Visit!</h5></span>
+                                        <a href="https://c-tracker.netlify.com/" target="_blank"><img class="rounded projectPics" src="./images/COVID.png" alt="COVID-19 Tracker"></a>
+                                    </div>
+                                    <div class = "col-xl-4 mb-3 cols">
+                                        <span><h5>Cabin Rental Site - Click to Visit!</h5></span>
+                                        <a href="https://pigeoncoopcabins.netlify.com" target="_blank"><img class="rounded projectPics" src="./images/PigeonCoop.png" alt="Pigeon Coop Cabin Picture"></a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class = "container-fluid">
+                                <div class = "row text-center">
+                                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                                        <div class="card">
+                                            <img class="card-img-top" src="images/screen1.png" alt="Card image cap">
+                                            <div class="card-body">
+                                              <h5 class="card-title">Tic-Tac-Toe</h5>
+                                              <p class="card-text">A simple game of tic-tac-toe played with X's and O's, with the ability to restart.</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                                        <div class="card">
+                                            <img class="card-img-top" src="images/screen2.png" alt="Card image cap">
+                                            <div class="card-body">
+                                              <h5 class="card-title">Dice Roller</h5>
+                                              <p class="card-text">App to randomly roll two dice and then sum them, handy when you've lost some dice!</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                                        <div class="card">
+                                            <img class="card-img-top" src="images/screen3.png" alt="Card image cap">
+                                            <div class="card-body">
+                                              <h5 class="card-title">Anagram Game</h5>
+                                              <p class="card-text">Game allowing user to input anagrams of a given word within a time limit.</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                                        <div class="card">
+                                            <img class="card-img-top" src="images/screen4.png" alt="Card image cap">
+                                            <div class="card-body">
+                                              <h5 class="card-title">Flag Matcher</h5>
+                                              <p class="card-text">Simple game where the user must match the flag to the country, complete with sounds.</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                                        <div class="card">
+                                            <img class="card-img-top" src="images/screen5.png" alt="Card image cap">
+                                            <div class="card-body">
+                                              <h5 class="card-title">Memory Game</h5>
+                                              <p class="card-text">A game where the user must match all cards under the time limit, with card animations!</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                                        <div class="card">
+                                            <img class="card-img-top" src="images/screen6.png" alt="Card image cap">
+                                            <div class="card-body">
+                                              <h5 class="card-title">Calculator</h5>
+                                              <p class="card-text">My personal attempt to recreate an apple-like calculator with full functionality</p>
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <iframe src="./images/resume.pdf" width="100%" height="600px">
+                            </iframe>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+
+        <div class="section">
+            <a class="anchor" id="anchor3">&nbsp;</a>
+            <h2 class = "mt-5 headerTitles" id = "books">Recommended Reading</h2>
+            <div class = "container-fluid pics">
+                <div class = "row text-center">
+                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                        <img src = "images/bladeCover.jpg" class = "rounded cover" alt = "cover of the blades book">
+                    </div>
+                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                        <img src = "images/thronesCover.jpg" class = "rounded cover" alt = "cover of the Game of Thrones book">
+                    </div>
+                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                        <img src = "images/nameCover.jpg" class = "rounded cover" alt = "cover of the The Name of the Wind book">
+                    </div>
+                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                        <img src = "images/lockCover.jpg" class = "rounded cover" alt = "cover of the Lies of Locke Lamora book">
+                    </div>
+                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                        <img src = "images/kingsCover.jpg" class = "rounded cover" alt = "cover of The Way of Kings book">
+                    </div>
+                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                        <img src = "images/gardensCover.jpg" class = "rounded cover" alt = "cover of Gardens of the Moon book">
+                    </div>
+                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                        <img src = "images/duneCover.jpg" class = "rounded cover" alt = "cover of Dune book">
+                    </div>
+                    <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
+                        <img src = "images/misbornCover.jpg" class = "rounded cover" alt = "cover of Dune book">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+    <footer>
+        <div class = "bg-dark text-light text-center mt-3">
+            <div class="footerSpan">Contact Me: <i class="fas fa-envelope mr-1 ml-2"></i> jake906@charter.net  <i class="fas fa-mobile mx-2"></i> 715-894-7876</div>
+        </div>
+    </footer>
+</body>
+
+
+ <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class = "mt-2">Contact Me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="inputs input-group-text bg-dark text-light">Name</span>
+                        </div>
+                        <input required type="text" class="form-control" id = "name" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="inputs input-group-text bg-dark text-light">Email</span>
+                        </div>
+                        <input required type="text" class="form-control" id = "email" placeholder="johndoe@gmail.com" required>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="inputs input-group-text bg-dark text-light">Message</span>
+                        </div>
+                        <textarea required class="form-control" id = "message" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="sendEmail()">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
