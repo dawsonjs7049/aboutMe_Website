@@ -18,36 +18,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>Jake Dawson - Web Developer</title>
-
-    <script>
-        function sendEmail(){
-            window.onscroll = function () { window.scrollTo(0, 0); };
-
-            setTimeout(function(){
-                window.onscroll = function () {};
-            }, 200);
-
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            if(name !== "" && email !== "" && message !== "") {
-                $('#contactModal').modal('hide');
-
-                Email.send({
-                    SecureToken : "3eeddee9-882b-4535-9aca-6a172e267976",
-                    To : "jake906@charter.net",
-                    From : "contactJakeDawson@gmail.com",
-                    Subject : "Message From Website",
-                    Body : "Message submitted by " + name + " with contact email of: " + email + ". \n Message is: \n" + message
-                }).then (
-                    message => window.alert("You're message has been sent!")
-                )
-            } else {
-            
-            }
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -71,20 +41,99 @@
             </span>
         </div>
     </header>
+
+    <div id="spacer" style="height: 5rem;"></div>
+    <div id="carouselExampleIndicators" class="carousel slide" style="height: 25rem;"data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active img1">
+            <div class="carousel-caption d-none d-sm-block text-light">
+                <h1 class="carousel-title" style="margin-bottom: 8.5rem;">Welcome!</h1>
+            </div>
+            <div class="text-center mt-2">
+                <a 
+                    style="background-color:rgb(104, 93, 93);color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont,San Francisco,Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto,Segoe UI, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" 
+                    href="https://unsplash.com/@pankajpatel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    title="Download free do whatever you want high-resolution photos from Pankaj Patel">
+                        <span style="display:inline-block;padding:2px 3px">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" 
+                                viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                            </svg>
+                        </span>
+                        <span 
+                            style="display:inline-block;padding:2px 3px">Pankaj Patel
+                        </span>
+                </a>
+            </div>
+          </div>
+          <div class="carousel-item img2">
+            <div class="carousel-caption d-none d-sm-block text-light" style="margin-bottom: 6rem;">
+                <h1 class="carousel-title">Looking to Learn?</h1>
+                <div class="mt-4">
+                    <span>
+                        <a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q" class="btn linkBtn btn-primary" target="_blank">Dev Ed</a>
+                        <a href="https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw" class="btn linkBtn btn-primary" target="_blank">Web Dev Simplified</a>
+                        <a href="https://www.youtube.com/channel/UCmXmlB4-HJytD7wek0Uo97A" class="btn linkBtn btn-primary" target="_blank">Javascript Mastery</a>
+                        <a href="https://www.udemy.com/course/front-end-web-development/" class="btn linkBtn btn-primary" target = "_blank">Udemy</a>
+                    </span>
+                </div>
+            </div>
+            <div class="text-center mt-2">
+                <a 
+                    style="background-color:rgb(104, 93, 93);color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont,San Francisco,Helvetica Neue, Helvetica, Ubuntu, Roboto, Noto,Segoe UI, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" 
+                    href="https://unsplash.com/@emilep?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    title="Download free do whatever you want high-resolution photos from Émile Perron">
+                        <span 
+                            style="display:inline-block;padding:2px 3px">
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                    style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" 
+                                    viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+                                </svg>
+                        </span>
+                        <span 
+                            style="display:inline-block;padding:2px 3px">Émile Perron
+                        </span>
+                </a>
+            </div>
+          </div>
+          <div class="carousel-item img3">
+            <div class="text-center" style="margin-bottom: 5rem;">
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+
     <main class = "px-4">
-        <div class = "about-me-container section mb-5 mt-4">
+        <div class = "about-me-container section mb-5">
             <a class="anchor" id="anchor1">&nbsp;</a>
             <h2 class="headerTitles" id = "aboutMe">Who Am I?</h2>
 
-            <div class = "about-me px-3 py-2">
+            <div class = "border-dark text-dark background-light px-3 py-2">
                 <div class = "container-fluid">
                     <div class = "row py-4">
                         <div class = "col-md-6 my-auto">
                             <p>
                                 Hey there, my name is Jake Dawson. I'm a recent graduate from the University of Wisconsin - Eau Claire with a bachelor's degree in Software Engineering and a minor in Physics currently looking for a job in the web-development field.
-                                In academics, I've always been most interested in STEM fields like robotics and natural sciences, though
+                                <br><br>In academics, I've always been most interested in STEM fields like robotics and natural sciences, though
                                 throughout my years in college I've taken an interest in fields ranging from World History, to Circuits,
-                                to Software Development. After my first C++ class, I knew that the software field was the field for me.
+                                to Software Development. <br><br>After my first C++ class, I knew that the software field was the field for me.
                                 After starting the program, I've had experience developing software in languages such as Java, C, C++, Ruby,
                                 Scheme, and even some low-level MIPS. 
                             </p>
@@ -102,11 +151,11 @@
                         </div>
                         <div class = "col-md-6 my-auto" id = "secondDiv">
                             <p>
-                                The area I found the most enjoyment in was web-development. Learning HTML, JavaScript, CSS, 
+                                Throughout college, I found the most enjoyment in web-development. Learning HTML, JavaScript, CSS, 
                                 and some PHP that brings designs to life right before your eyes is one of the most satisfying areas I've come 
-                                across in the whole of my journey so far. In addition to the education received at my University, I've
+                                across in the whole of my journey so far. <br><br>In addition to the education received at my University, I've
                                 also dabbled with developing simple iOS apps and spent time on learning some different web technologies like
-                                Bootstrap, as well as some different web-development tricks like lightboxes. Visual design for user interfaces
+                                Bootstrap, as well as some different web-development tricks like lightboxes. <br><br>Visual design for user interfaces
                                 is easily my favorite area of Computer Science so far; its a super interesting mix of art and technology that
                                 is fun to develop and use.
                             </p>
@@ -119,10 +168,10 @@
                         <div class = "col-md-6 my-auto">
                             <p>
                                 Beyond academics and software in general, my biggest passions are reading in the fantasy genre,
-                                all things involving the Green Bay Packers, and obsessing over anything to do with outer space. I could talk all day
+                                all things involving the Green Bay Packers, and obsessing over anything to do with outer space. <br><br>I could talk all day
                                 about some of my favorite authors' works, from Game of Thrones to the Stormlight Archive to classics like Dune! Of the Packers, I could 
                                 ramble on about Packers like Reggie White (aka "The Minister of Defense!"), Donald Driver,
-                                Brett Favre, Jordy Nelson, Charles Woodson, and of course Aaron Rodgers. Hopefully, you've gleaned a good image of me from 
+                                Brett Favre, Jordy Nelson, Charles Woodson, and of course Aaron Rodgers. <br><br>Hopefully, you've gleaned a good image of me from 
                                 these descriptions, please feel free to contact me via the above "Contact Me" button or directly through 
                                 the means provided at the bottom of the page!
                             </p>
@@ -139,7 +188,7 @@
         <div class="section">            
             <a class="anchor" id="anchor2">&nbsp;</a>
             <h2 class="headerTitles" id = "projects">Projects</h2>
-            <div class = "tabs_container pt-3 px-3" style = "border: 2px solid black;">
+            <div class = "tabs_container border-dark text-dark background-light pt-3 px-3">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Projects</a>
@@ -153,7 +202,7 @@
                     </ul>
                     <div class="tab-content py-3" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <p class = "pt-1">
+                            <p class = "pt-1 px-3">
                                 Throughout my education at UWEC, I've worked on many different projects in many different languages. In C, I have experience with
                                 bitshifting and checksum programs as well as compression algorithms like Huffman compression. In C++,
                                 I've worked on file sending with encryption/decryption over networks and simple game-like programs that simulate disease outbreak.
@@ -265,41 +314,48 @@
         <div class="section">
             <a class="anchor" id="anchor3">&nbsp;</a>
             <h2 class = "mt-5 headerTitles" id = "books">Recommended Reading</h2>
-            <div class = "container-fluid pics">
+            <div class = "container-fluid pics border-dark background-light">
                 <div class = "row text-center">
                     <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
-                        <img src = "images/bladeCover.jpg" class = "rounded cover" alt = "cover of the blades book">
+                        <img src = "images/bladeCover.jpg" id="1" class = "rounded book cover" alt = "cover of the blades book">
                     </div>
                     <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
-                        <img src = "images/thronesCover.jpg" class = "rounded cover" alt = "cover of the Game of Thrones book">
+                        <img src = "images/thronesCover.jpg" id="2" class = "rounded book cover" alt = "cover of the Game of Thrones book">
                     </div>
                     <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
-                        <img src = "images/nameCover.jpg" class = "rounded cover" alt = "cover of the The Name of the Wind book">
+                        <img src = "images/nameCover.jpg" id="3" class = "rounded book cover" alt = "cover of the The Name of the Wind book">
                     </div>
                     <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
-                        <img src = "images/lockCover.jpg" class = "rounded cover" alt = "cover of the Lies of Locke Lamora book">
+                        <img src = "images/lockCover.jpg" id="4" class = "rounded book cover" alt = "cover of the Lies of Locke Lamora book">
                     </div>
                     <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
-                        <img src = "images/kingsCover.jpg" class = "rounded cover" alt = "cover of The Way of Kings book">
+                        <img src = "images/kingsCover.jpg" id="5" class = "rounded book cover" alt = "cover of The Way of Kings book">
                     </div>
                     <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
-                        <img src = "images/gardensCover.jpg" class = "rounded cover" alt = "cover of Gardens of the Moon book">
+                        <img src = "images/gardensCover.jpg" id="6" class = "rounded book cover" alt = "cover of Gardens of the Moon book">
                     </div>
                     <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
-                        <img src = "images/duneCover.jpg" class = "rounded cover" alt = "cover of Dune book">
+                        <img src = "images/duneCover.jpg" id="7" class = "rounded book cover" alt = "cover of Dune book">
                     </div>
                     <div class = "col-sm-12 col-md-4 col-lg-3 mb-3">
-                        <img src = "images/misbornCover.jpg" class = "rounded cover" alt = "cover of Dune book">
+                        <img src = "images/misbornCover.jpg" id="8" class = "rounded book cover" alt = "cover of Dune book">
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <div class="toggle">
+            <label class="switch mt-4">
+                <input type="checkbox" id="darkModeSlider">
+                <span class="slider round"></span>
+            </label>
+            <p class="text-light">Toggle Dark-Mode</p> 
+        </div>
         
     </main>
     <footer>
         <div class = "bg-dark text-light text-center mt-3">
-            <div class="footerSpan">Contact Me: <i class="fas fa-envelope mr-1 ml-2"></i> jake906@charter.net  <i class="fas fa-mobile mx-2"></i> 715-894-7876</div>
+            <div class="footerSpan">Contact Me: <i class="fas fa-envelope mr-1 ml-2"></i> <a href="mailto:jake906@charter.net">jake906@charter.net</a>  <i class="fas fa-mobile mx-2"></i> <a href="tel:17158947876">715-894-7876</a></div>
         </div>
     </footer>
 </body>
@@ -343,3 +399,187 @@
         </div>
     </div>
 </html>
+
+<script>
+    const toggle = document.getElementById("darkModeSlider")
+
+    toggle.addEventListener("click", () => {
+        if(toggle.checked){
+            //dark mode disabled - want to enable it
+            const elements = document.querySelectorAll('.background-light');
+
+            elements.forEach(element => {
+                element.classList.remove('text-dark', 'background-light', 'border-dark');
+                element.classList.add('text-light', 'background-dark', 'border-light');
+            })
+        } else {
+            //dark mode enabled - want to disable it
+            const elements = document.querySelectorAll('.background-dark');
+
+            elements.forEach(element => {
+                element.classList.remove('text-light', 'background-dark', 'border-light');
+                element.classList.add('text-dark', 'background-light', 'border-dark');
+            })
+        }
+    })
+
+
+    //store all the book descriptions
+    let descriptions = {
+        1: `Logen Ninefingers, infamous barbarian, has finally run out of luck. Caught in one feud too many, he's on the verge of becoming a dead barbarian - leaving nothing behind him but bad songs, dead friends, and a lot of happy enemies.` + "\n" +
+            ` Nobleman, dashing officer, and paragon of selfishness, Captain Jezal dan Luthar has nothing more dangerous in mind than fleecing his friends at cards and dreaming of glory in the fencing circle. But war is brewing, and on the battlefields of the frozen North they fight by altogether bloodier rules.` + "\n" +
+            ` Inquisitor Glokta, cripple turned torturer, would like nothing better than to see Jezal come home in a box. But then Glokta hates everyone: Cutting treason out of the Union one confession at a time leaves little room for friendship. His latest trail of corpses may lead him right to the rotten heart of government, if he can stay alive long enough to follow it.` + "\n" +
+            ` Enter the wizard, Bayaz. A bald old man with a terrible temper and a pathetic assistant, he could be the First of the Magi, he could be a spectacular fraud, but whatever he is, he's about to make the lives of Logen, Jezal, and Glokta a whole lot more difficult.` + "\n" +
+            ` Murderous conspiracies rise to the surface, old scores are ready to be settled, and the line between hero and villain is sharp enough to draw blood.` + "\n" +
+            ` Unpredictable, compelling, wickedly funny, and packed with unforgettable characters, The Blade Itself is noir fantasy with a real cutting edge.`,
+        2: `Winter is coming. Such is the stern motto of House Stark, the northernmost of the fiefdoms that owe allegiance to King Robert Baratheon in far-off King’s Landing. There Eddard Stark of Winterfell rules in Robert’s name. There his family dwells in peace and comfort: his proud wife, Catelyn; his sons Robb, Brandon, and Rickon; his daughters Sansa and Arya; and his bastard son, Jon Snow. Far to the north, behind the towering Wall, lie savage Wildings and worse—unnatural things relegated to myth during the centuries-long summer, but proving all too real and all too deadly in the turning of the season.` + "\n" +
+            ` Yet a more immediate threat lurks to the south, where Jon Arryn, the Hand of the King, has died under mysterious circumstances. Now Robert is riding north to Winterfell, bringing his queen, the lovely but cold Cersei, his son, the cruel, vainglorious Prince Joffrey, and the queen’s brothers Jaime and Tyrion of the powerful and wealthy House Lannister—the first a swordsman without equal, the second a dwarf whose stunted stature belies a brilliant mind. All are heading for Winterfell and a fateful encounter that will change the course of kingdoms.`+ "\n" +
+            ` Meanwhile, across the Narrow Sea, Prince Viserys, heir of the fallen House Targaryen, which once ruled all of Westeros, schemes to reclaim the throne with an army of barbarian Dothraki—whose loyalty he will purchase in the only coin left to him: his beautiful yet innocent sister, Daenerys.`,
+        3: `DAY ONE: THE NAME OF THE WIND`+ "\n" +
+            ` My name is Kvothe.`+ "\n" +
+            ` I have stolen princesses back from sleeping barrow kings. I burned down the town of Trebon. I have spent the night with Felurian and left with both my sanity and my life. I was expelled from the University at a younger age than most people are allowed in. I tread paths by moonlight that others fear to speak of during day. I have talked to Gods, loved women, and written songs that make the minstrels weep.`+ "\n" +
+            ` You may have heard of me.`+ "\n" +
+            ` So begins a tale unequaled in fantasy literature - the story of a hero told in his own voice. It is a tale of sorrow, a tale of survival, a tale of one man’s search for meaning in his universe, and how that search, and the indomitable will that drove it, gave birth to a legend. `,
+        4: `An orphan’s life is harsh - and often short - in the mysterious island city of Camorr. But young Locke Lamora dodges death and slavery, becoming a thief under the tutelage of a gifted con artist. As leader of the band of light-fingered brothers known as the Gentleman Bastards, Locke is soon infamous, fooling even the underworld’s most feared ruler. But in the shadows lurks someone still more ambitious and deadly. Faced with a bloody coup that threatens to destroy everyone and everything that holds meaning in his mercenary life, Locke vows to beat the enemy at his own brutal game - or die trying. `,
+        5: `Roshar is a world of stone and storms. Uncanny tempests of incredible power sweep across the rocky terrain so frequently that they have shaped ecology and civilization alike. Animals hide in shells, trees pull in branches, and grass retracts into the soilless ground. Cities are built only where the topography offers shelter.`+ "\n" +
+            ` It has been centuries since the fall of the 10 consecrated orders known as the Knights Radiant, but their Shardblades and Shardplate remain: mystical swords and suits of armor that transform ordinary men into near-invincible warriors. Wars were fought for them, and won by them. One such war rages on the Shattered Plains. There, Kaladin has been reduced to slavery. In a war that makes no sense, where 10 armies fight separately against a single foe, he struggles to save his men and to fathom the leaders who consider them expendable.`+ "\n" +
+            ` Brightlord Dalinar Kholin commands one of those other armies. Like his brother, the late king, he is fascinated by an ancient text called The Way of Kings. Troubled by visions of ancient times and the Knights Radiant, he has begun to doubt his own sanity.`+ "\n" +
+            ` Across the ocean, an untried young woman named Shallan seeks to train under an eminent scholar and notorious heretic, Dalinar’s niece, Jasnah. Though she genuinely loves learning, Shallan’s motives are less than pure. As she plans a daring theft, her research for Jasnah hints at secrets of the Knights Radiant and the true cause of the war.`,
+        6: `The Malazan Empire simmers with discontent, bled dry by interminable warfare, bitter infighting, and bloody confrontations with ancient and implacable sorcerers. Even the imperial legions, long inured to the bloodshed, yearn for some respite. Yet Empress Laseen’s rule remains absolute, enforced by her dreaded Claw assassins. For Sergeant Whiskeyjack and his squad of Bridgeburners, and for Tattersail, their lone surviving mage, the aftermath of the siege of Pale should have been a time to mourn the many dead. But Darujhistan, last of the Free Cities, yet holds out. It is to this ancient citadel that Laseen turns her predatory gaze.`+ "\n" +
+            ` However, the Empire is not alone in this great game. Sinister, shadowbound forces are gathering as the gods themselves prepare to play their hand....`+ "\n" +
+            ` Conceived and written on a panoramic scale, Gardens of the Moon is epic fantasy of the highest order - an enthralling adventure by an outstanding voice.`,
+        7: `Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for....`+ "\n" +
+            ` When House Atreides is betrayed, the destruction of Paul’s family will set the boy on a journey toward a destiny greater than he could ever have imagined. And as he evolves into the mysterious man known as Muad’Dib, he will bring to fruition humankind’s most ancient and unattainable dream.`+ "\n" + 
+            ` A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction.`,
+        8: `Brandon Sanderson, fantasy's newest master tale spinner, author of the acclaimed debut Elantris, dares to turn a genre on its head by asking a simple question: What if the hero of prophecy fails? What kind of world results when the Dark Lord is in charge? The answer will be found in the Mistborn Trilogy, a saga of surprises and magical martial-arts action that begins in Mistborn.`+ "\n" +
+            ` For a thousand years the ash fell and no flowers bloomed. For a thousand years the Skaa slaved in misery and lived in fear. For a thousand years the Lord Ruler, the "Sliver of Infinity," reigned with absolute power and ultimate terror, divinely invincible. Then, when hope was so long lost that not even its memory remained, a terribly scarred, heart-broken half-Skaa rediscovered it in the depths of the Lord Ruler's most hellish prison.`+ "\n" +
+            ` Kelsier "snapped" and found in himself the powers of a Mistborn. A brilliant thief and natural leader, he turned his talents to the ultimate caper, with the Lord Ruler himself as the mark. Kelsier recruited the underworld's elite, the smartest and most trustworthy allomancers, each of whom shares one of his many powers, and all of whom relish a high-stakes challenge. Only then does he reveal his ultimate dream, not just the greatest heist in history, but the downfall of the divine despot. But even with the best criminal crew ever assembled, Kel's plan looks more like the ultimate long shot, until luck brings a ragged girl named Vin into his life.`+ "\n" +
+            ` Like him, she's a half-Skaa orphan, but she's lived a much harsher life. Vin has learned to expect betrayal from everyone she meets, and gotten it. She will have to learn to trust, if Kel is to help her master powers of which she never dreamed.`,
+    }
+
+    let info = {
+        1: {
+            title: "The Blade Itself",
+            author: "Joe Abercrombie"
+        },
+        2: {
+            title: "A Game of Thrones",
+            author: "George RR Martin"
+        },
+        3: {
+            title: "The Name of the Wind",
+            author: "Patrick Rothfuss"
+        },
+        4: {
+            title: "The Lies of Locke Lamora",
+            author: "Scott Lynch"
+        },
+        5: {
+            title: "The Way of Kings",
+            author: "Brandon Sanderson"
+        },
+        6: {
+            title: "Gardens of the Moon",
+            author: "Steven Erikson"
+        },
+        7: {
+            title: "Dune",
+            author: "Frank Herbert"
+        },
+        8: {
+            title: "The Final Empire",
+            author: "Brandon Sanderson"
+        },
+    }
+
+
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    document.body.appendChild(lightbox);
+
+    console.log('hello there');
+
+    const books = document.querySelectorAll('img.book');
+    books.forEach(image => {
+        image.addEventListener('click', e => {
+            lightbox.classList.add('active');
+            
+            let containerDiv = document.createElement('div');
+            containerDiv.classList.add('containerDiv');
+            
+            let img = document.createElement('img');
+            img.src = image.src;
+            img.classList.add('descriptionImg');
+
+            let imgContainer = document.createElement('div');
+            imgContainer.id = "imageContainer";
+            imgContainer.classList.add('imageContainer');
+            imgContainer.appendChild(img);
+
+            let description = document.createElement('div');
+            description.id = "description";
+            description.classList.add('description');
+            let textArea = document.createElement('textarea');
+            textArea.innerText = descriptions[image.id];
+            textArea.spellcheck = false;
+            description.appendChild(textArea);
+
+            let header = document.createElement('div');
+            header.classList.add('lightboxHeader');
+            header.id = "header";
+            header.innerText = `${info[image.id].title}` + "\n" + `${info[image.id].author}`;
+
+            //remove all children of the lightbox in the case that we are opening a second lightbox
+            while(lightbox.firstChild){
+                lightbox.removeChild(lightbox.firstChild);
+            }
+
+            containerDiv.appendChild(header);
+            containerDiv.appendChild(imgContainer);
+            containerDiv.appendChild(description);
+            lightbox.appendChild(containerDiv);
+
+        })
+    })
+
+    
+    lightbox.addEventListener('click', e => {
+        //if what we clicked on was not what we added the event listener to (ie the lightbox), so the image in this case
+        if(e.target !== e.currentTarget){
+            return
+        }
+        lightbox.classList.remove('active');
+    })
+
+    console.log(books);
+
+
+
+    function sendEmail(){
+        window.onscroll = function () { window.scrollTo(0, 0); };
+
+        setTimeout(function(){
+            window.onscroll = function () {};
+        }, 200);
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if(name !== "" && email !== "" && message !== "") {
+            $('#contactModal').modal('hide');
+
+            Email.send({
+                SecureToken : "cbdef714-76f3-486a-b4f2-e211ede237bc",
+                To : "jake906@charter.net",
+                From : "contactJakeDawson@gmail.com",
+                Subject : "Message From Website",
+                Body : "Message submitted by " + name + " with contact email of: " + email + ". \n Message is: \n" + message
+            })
+            .then (
+                message => window.alert("You're message has been sent!")
+            )
+            .catch(error => console.log(error));
+        } 
+    }
+</script>

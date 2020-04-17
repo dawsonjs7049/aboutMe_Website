@@ -12,6 +12,121 @@ html {
   scroll-behavior: smooth;
 }
 
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0,0,0,.8);
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.book:hover {
+  cursor: pointer;
+}
+
+.containerDiv {
+  height: 75vh;
+  width: 75vw;
+  max-width: 900px;
+  border: 2px solid darkslategray;
+  background-color: ghostwhite;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 8fr;
+  grid-template-areas:
+    "header header" 
+    "descriptionImg description";
+}
+
+#header {
+  grid-area: header;
+  background-color: rgb(25, 25, 87);
+  color: ghostwhite;
+  border: 2px solid darkslategray;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#imageContainer {
+  grid-area: descriptionImg;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 1rem 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+#description {
+  grid-area: description;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+textarea {
+  background-color: ghostwhite;;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  max-height: 58vh;
+  border: none;
+}
+
+.lightboxHeader {
+  text-align: center;
+  font-size: 25px;
+  padding: 1rem 0 1rem 0;
+}
+
+.descriptionImg {
+  height: auto;
+  max-height: 60vh;
+  width: 100%;
+  max-width: 390px;
+  border: 1px solid darkslategray;
+  border-radius: 5px;
+} 
+
+.img1 {
+  background-image: url("./images/html_image1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
+  width: 100vw;
+}
+.img2 {
+  background-image: url("./images/computerOnDesk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
+  width: 100vw;
+}
+.img3 {
+  background-image: url("./images/wordcloud1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25rem;
+  width: 100vw;
+}
+
+.carousel-title {
+  text-shadow: 2px 2px #000000;
+}
+
+.carousel-paragraph {
+  text-shadow: 1px 1px #000000;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -41,7 +156,7 @@ a.anchor {
 }
 
 #aboutMe {
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 main {
@@ -59,14 +174,107 @@ main {
 }
 
 .tabs_container {
-  background-color: white;
   min-height: 40rem;
 }
 
-.about-me {
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
   background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(24, 58, 16);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(24, 58, 16);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.toggle {
+  text-align: center;
+}
+
+
+
+
+.border-light {
+  border: 2pt solid ghostwhite;
+}
+
+.border-dark {
   border: 2pt solid black;
 }
+
+.text-light {
+  color: ghostwhite;
+}
+
+.text-dark {
+  color: black;
+}
+
+.background-light {
+  background-color: white;
+}
+
+.background-dark {
+  background-color: rgb(25, 25, 87);
+}
+
+
+
 
 .inputs {
   width: 6rem;
@@ -85,9 +293,7 @@ main {
 }
 
 .pics {
-  background-color: white;
   padding: 2rem 0;
-  border: 2pt solid black;
 }
 
 .card {
@@ -106,9 +312,9 @@ main {
 }
 
 .topImgs {
-  height: 80%;
+  height: 85%;
   width: auto;
-  max-height: 250px;
+  max-height: 325px;
 }
 
 .about-me img {
@@ -126,7 +332,7 @@ main {
   border: 2pt solid darkslategray;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 578px) {
   #aboutMe {
     margin-top: 8rem;
   }
@@ -166,6 +372,15 @@ main {
     text-align: center;
   }
 
+  .topImgs {
+    max-width: 95%;
+    height: auto;
+  }
+
+  #carouselExampleIndicators {
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -185,4 +400,67 @@ main {
   #uwecLogo {
     margin-top: 1rem;
   }
+
+  .linkBtn {
+    margin: 0 10px 10px 0;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .containerDiv {
+    height: 80vh;
+    width: 90vw;
+    max-width: 900px;
+    border: 2px solid darkslategray;
+    background-color: ghostwhite;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 45% 40%;
+    grid-template-areas:
+      "header" 
+      "descriptionImg"
+      "description";
+  }
+  #imageContainer {
+    grid-area: descriptionImg;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 0 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #description {
+    grid-area: description;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  textarea {
+    background-color: ghostwhite;;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    max-height: 58vh;
+    border: none;
+  }
+  
+  .lightboxHeader {
+    font-size: 25px;
+    padding: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .descriptionImg {
+    height: 100%;
+    width: auto;
+    max-width: 90%;
+    border: 1px solid darkslategray;
+    border-radius: 5px;
+  } 
+
 }
