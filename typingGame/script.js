@@ -17,6 +17,23 @@ let runCount = parseInt(localStorage.getItem("runs")) - 1;
 const numRuns = parseInt(localStorage.getItem("runs"));
 let runningWPM = 0;
 
+async function asyncGetRandomQuote() {
+  const test = await getQuotes();
+
+  quotes = test.map(a => a.text);
+  authors = test.map(b => b.author);
+}
+
+asyncGetRandomQuote();
+
+const sleep = milliseconds => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds));
+};
+
+sleep(500).then(() => {
+  renderRandomQuote();
+});
+
 let scores = JSON.parse(localStorage.getItem("scores"));
 if (scores === undefined || scores === null) {
   let scores = [0, 0, 0, 0, 0];
@@ -117,23 +134,6 @@ function renderRandomQuote() {
   }
   startTimer();
 }
-
-async function asyncGetRandomQuote() {
-  const test = await getQuotes();
-
-  quotes = test.map(a => a.text);
-  authors = test.map(b => b.author);
-}
-
-asyncGetRandomQuote();
-
-const sleep = milliseconds => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds));
-};
-
-sleep(500).then(() => {
-  renderRandomQuote();
-});
 
 let startTime;
 function startTimer() {

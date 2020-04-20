@@ -5,9 +5,7 @@ body {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   background-color: rgb(25, 25, 87);
-  width: 100vw;
-  max-width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
 }
 
 html {
@@ -161,7 +159,6 @@ a.anchor {
  vertical-align: middle;
  font-size: 30px;
  color: white;
- margin-left: 24px;
 }
 
 #aboutMe {
@@ -346,7 +343,7 @@ input:checked + .slider:before {
   }
 
   main {
-    padding: 0rem;
+    padding: 0;
     width: 100%;
   }
 
@@ -356,6 +353,8 @@ input:checked + .slider:before {
     text-align: center;
     font-size: 35px;
     height: 4rem;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 
   #dropdownLinks {
