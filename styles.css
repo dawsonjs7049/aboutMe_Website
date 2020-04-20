@@ -12,6 +12,13 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
+
 #lightbox {
   position: fixed;
   z-index: 1000;
@@ -92,7 +99,7 @@ textarea {
   max-height: 60vh;
   width: 100%;
   max-width: 390px;
-  border: 1px solid darkslategray;
+  border: 2px solid darkslategray;
   border-radius: 5px;
 } 
 
@@ -157,11 +164,6 @@ a.anchor {
 
 #aboutMe {
   margin-top: 3rem;
-}
-
-main {
-  max-width: 1300px;
-  margin: auto;
 }
 
 .footerSpan {
@@ -332,9 +334,18 @@ input:checked + .slider:before {
   border: 2pt solid darkslategray;
 }
 
+#spacer {
+  height: 5rem;
+}
+
 @media only screen and (max-width: 578px) {
   #aboutMe {
     margin-top: 8rem;
+  }
+
+  main {
+    padding: 0rem;
+    width: 100%;
   }
 
   #nameSpan {
@@ -342,6 +353,7 @@ input:checked + .slider:before {
     margin: auto;
     text-align: center;
     font-size: 35px;
+    height: 4rem;
   }
 
   #dropdownLinks {
@@ -355,9 +367,34 @@ input:checked + .slider:before {
     margin-left: 48px;
   }
 
+  #spacer {
+    height: 2rem;
+  }
+
+  .border-dark {
+    border: none !important;
+  }
+
+  /* html{
+    width: 100vw;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    height: 8rem;
+    width: 100%;
+    z-index: 100;
+    opacity: .96;
+  }
+
+  .header-container {
+    height: 8rem;
+  } */
+
   .header-row {
     background-color: #343A40;
-    height: 5rem;
+    height: 4rem;
   }
 
   .projectPics {
@@ -379,6 +416,11 @@ input:checked + .slider:before {
 
   #carouselExampleIndicators {
     display: none;
+  }
+
+  #description {
+    padding: 1rem;
+    margin-top: 1rem;
   }
 
 }
@@ -433,7 +475,6 @@ input:checked + .slider:before {
   }
   
   #description {
-    grid-area: description;
     padding: 1rem 1.5rem 1rem 1.5rem;
     margin-top: 1rem;
   }
@@ -459,7 +500,7 @@ input:checked + .slider:before {
     height: 100%;
     width: auto;
     max-width: 90%;
-    border: 1px solid darkslategray;
+    border: 2px solid darkslategray;
     border-radius: 5px;
   } 
 

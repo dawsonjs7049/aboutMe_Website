@@ -42,7 +42,7 @@
         </div>
     </header>
 
-    <div id="spacer" style="height: 5rem;"></div>
+    <div id="spacer"></div>
     <div id="carouselExampleIndicators" class="carousel slide" style="height: 25rem;"data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -120,7 +120,7 @@
         </a>
     </div>
 
-    <main class = "px-4">
+    <main>
         <div class = "about-me-container section mb-5">
             <a class="anchor" id="anchor1">&nbsp;</a>
             <h2 class="headerTitles" id = "aboutMe">Who Am I?</h2>
@@ -496,8 +496,6 @@
     const lightbox = document.createElement('div');
     lightbox.id = 'lightbox';
     document.body.appendChild(lightbox);
-
-    console.log('hello there');
 
     const books = document.querySelectorAll('img.book');
     books.forEach(image => {
