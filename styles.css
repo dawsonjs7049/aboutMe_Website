@@ -19,6 +19,10 @@ main {
   margin: auto;
 }
 
+.box {
+  border-radius: 5px;
+}
+
 #lightbox {
   position: fixed;
   z-index: 1000;
@@ -26,7 +30,7 @@ main {
   width: 100%;
   height: 100%;
   display: none;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #lightbox.active {
@@ -50,7 +54,7 @@ img.book:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 8fr;
   grid-template-areas:
-    "header header" 
+    "header header"
     "descriptionImg description";
 }
 
@@ -65,7 +69,7 @@ img.book:hover {
 
 #imageContainer {
   grid-area: descriptionImg;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 0 1rem 1rem;
@@ -80,7 +84,7 @@ img.book:hover {
 }
 
 textarea {
-  background-color: ghostwhite;;
+  background-color: ghostwhite;
   overflow: auto;
   width: 100%;
   height: 100%;
@@ -101,7 +105,7 @@ textarea {
   max-width: 390px;
   border: 2px solid darkslategray;
   border-radius: 5px;
-} 
+}
 
 .img1 {
   background-image: url("./images/html_image1.jpg");
@@ -140,7 +144,7 @@ header {
   height: 5rem;
   width: 100%;
   z-index: 100;
-  opacity: .96;
+  opacity: 0.96;
 }
 
 .headerTitles {
@@ -155,11 +159,11 @@ a.anchor {
 }
 
 #nameSpan {
- line-height: 5rem;
- vertical-align: middle;
- font-size: 30px;
- color: white;
- padding-left: 1.5rem;
+  line-height: 5rem;
+  vertical-align: middle;
+  font-size: 30px;
+  color: white;
+  padding-left: 1.5rem;
 }
 
 #aboutMe {
@@ -178,8 +182,6 @@ a.anchor {
 .tabs_container {
   min-height: 40rem;
 }
-
-
 
 /* The switch - the box around the slider */
 .switch {
@@ -205,8 +207,8 @@ a.anchor {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -217,8 +219,8 @@ a.anchor {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -248,9 +250,6 @@ input:checked + .slider:before {
   text-align: center;
 }
 
-
-
-
 .border-light {
   border: 2pt solid ghostwhite;
 }
@@ -274,9 +273,6 @@ input:checked + .slider:before {
 .background-dark {
   background-color: rgb(25, 25, 87);
 }
-
-
-
 
 .inputs {
   width: 6rem;
@@ -395,7 +391,7 @@ input:checked + .slider:before {
   } */
 
   .header-row {
-    background-color: #343A40;
+    background-color: #343a40;
     height: 4rem;
   }
 
@@ -424,7 +420,12 @@ input:checked + .slider:before {
     padding: 1rem;
     margin-top: 1rem;
   }
+}
 
+@media only screen and (max-width: 579px) {
+  #nameSpan {
+    padding-left: 0px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -448,6 +449,10 @@ input:checked + .slider:before {
   .linkBtn {
     margin: 0 10px 10px 0;
   }
+
+  #contact-btn {
+    max-width: 50%;
+  }
 }
 
 @media only screen and (max-width: 950px) {
@@ -462,34 +467,34 @@ input:checked + .slider:before {
     grid-template-columns: 1fr;
     grid-template-rows: 15% 45% 40%;
     grid-template-areas:
-      "header" 
+      "header"
       "descriptionImg"
       "description";
   }
   #imageContainer {
     grid-area: descriptionImg;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 0 0 0;
     width: 100%;
     height: 100%;
   }
-  
+
   #description {
     padding: 1rem 1.5rem 1rem 1.5rem;
     margin-top: 1rem;
   }
-  
+
   textarea {
-    background-color: ghostwhite;;
+    background-color: ghostwhite;
     overflow: auto;
     width: 100%;
     height: 100%;
     max-height: 58vh;
     border: none;
   }
-  
+
   .lightboxHeader {
     font-size: 25px;
     padding: 1rem 0 1rem 0;
@@ -497,13 +502,16 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
   }
-  
+
   .descriptionImg {
     height: 100%;
     width: auto;
     max-width: 90%;
     border: 2px solid darkslategray;
     border-radius: 5px;
-  } 
+  }
 
+  /* #nameSpan {
+    padding-left: 10px;
+  } */
 }

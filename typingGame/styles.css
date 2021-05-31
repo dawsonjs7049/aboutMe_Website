@@ -4,20 +4,28 @@
 }
 
 body {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    132deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: linear-gradient(-45deg, hsl(207, 96%, 68%), #4048be, #10793c, #075744);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
   height: 100vh;
   overflow-y: hidden;
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 #statAudio {
   position: absolute;
-  top: 75%;
+  top: 85%;
 }
 
 .indexBody {
@@ -110,14 +118,21 @@ body {
 }
 
 .nextBtn {
-  background-color: blue;
-  color: white;
+  background-color: white;
+  color: blue;
   font-size: 18px;
-  border-radius: 7px;
+  border: 2px solid blue;
+  border-radius: 3px;
   /* padding: 5px 20px 5px 20px; */
   padding: 0px 20px;
   font-weight: bold;
   cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.nextBtn:hover {
+  background-color: blue;
+  color: white;
 }
 
 .wide {
@@ -137,15 +152,19 @@ body {
   align-self: center;
   padding: 5px 20px 5px 20px;
   min-width: 10rem;
-  border-radius: 5px;
-  background-color: orange;
+  border-radius: 3px;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
+  border: 2px solid teal;
+  background-color: white;
+  color: teal;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: red;
-  color: black;
+  background-color: teal;
+  color: white;
 }
 
 .startBtn {
@@ -181,39 +200,45 @@ body {
 
 .stats {
   width: 10rem;
-  color: white;
   padding: 5px 20px 5px 20px;
-  border-radius: 5px;
-  font-size: 20px;
+  border-radius: 3px;
+  font-size: 18px;
   margin: 5rem 0 1rem 0;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-#stat1 {
-  background-color: orange;
-  margin-right: 1rem;
-}
-#stat1:hover {
-  color: black;
-  border: 1px solid white;
+#view-stats {
+  color: rgb(46, 204, 46);
+  border: 2px solid rgb(46, 204, 46);
 }
 
-#stat2 {
-  background-color: red;
-  margin-left: 1rem;
+#view-stats:hover {
+  color: white;
+  background-color: rgb(46, 204, 46);
+}
+
+#clear-stats {
+  color: rgb(221, 177, 31);
+  border: 2px solid rgb(221, 177, 31);
+  margin-left: 2rem;
+}
+
+#clear-stats:hover {
+  color: white;
+  background-color: rgb(221, 177, 31);
 }
 
 #homeLink {
   margin-left: 2rem;
-  background-color: lightgreen;
+  color: rgb(167, 16, 16);
+  border: 2px solid rgb(167, 16, 16);
 }
 
 #homeLink:hover {
-  color: black;
-}
-
-#stat2:hover {
-  background-color: orange;
-  color: black;
+  color: white;
+  background-color: rgb(167, 16, 16);
 }
 
 .scoreDiv {
@@ -243,10 +268,11 @@ body {
 
 .homeButton {
   position: absolute;
-  top: 29rem;
-  border-radius: 5px;
-  background-color: lightgreen;
-  color: white;
+  top: 55%;
+  border-radius: 3px;
+  border: 2px solid rgb(252, 168, 12);
+  background-color: white;
+  color: rgb(252, 168, 12);
   font-size: 25px;
   left: 0;
   right: 0;
@@ -254,4 +280,10 @@ body {
   margin-right: auto;
   width: 6rem;
   cursor: pointer;
+  width: 10rem;
+  transition: all 0.3s ease-in-out;
 }
+
+.homeButton:hover {
+  color: white;
+  background-color: rgb(252, 168, 12);

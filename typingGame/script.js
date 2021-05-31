@@ -6,7 +6,6 @@ const timerElement = document.getElementById("timer");
 const authorSpan = document.getElementById("author");
 const wpmSpan = document.getElementById("wpm");
 const statsDiv = document.getElementsByClassName("statsArea");
-const nextButton = document.getElementById("nextButton");
 const nextLink = document.getElementById("nextLink");
 const statAudio = document.getElementById("statAudio");
 
@@ -90,13 +89,16 @@ quoteInputElement.addEventListener("input", () => {
   });
 
   if (correct && quoteDisplayElement.innerText === quoteInputElement.value) {
+    document.getElementById("nextButton").focus();
+     
     let minutes = parseInt(timerElement.innerText) / 60;
     let wpm = parseInt((wordCount / minutes).toFixed(2));
+    
     runningWPM += wpm;
     wpmSpan.innerText = "WPM: " + wpm;
     statWrapper.classList.remove("hidden");
+    
     quoteInputElement.disabled = true;
-    nextButton.focus();
   }
 });
 
