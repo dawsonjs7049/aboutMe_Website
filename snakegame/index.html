@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Snake Game</title>
+        <style>
+            
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+           
+            canvas{
+                display: block;
+                margin: 0 auto;
+                border-radius: 5px;
+            
+            }
+            body {
+                background-color: aqua;
+                font-family: 'Poppins', sans-serif;
+            }
+            #title {
+                text-align: center;
+                font-size: 4rem;
+                font-weight: bold;
+                margin: 1rem;
+                text-shadow: 2px 2px #fdfdfd;
+            }
+            #start {
+                margin: 1rem;
+                background-color: blue;
+                border-radius: 3px;
+                color: white;
+                width: 6rem;
+                height: 2rem;
+                border: none;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            #restart {
+                margin: 1rem;
+                background-color: blue;
+                border-radius: 3px;
+                color: white;
+                width: 6rem;
+                height: 2rem;
+                display: none;
+                border: none;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+            #start:hover {
+                background-color: darkblue;
+            }
+
+            #restart:hover {
+                background-color: darkblue;
+            }
+
+            #buttonsContainer {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+            #resultSpan {
+                margin: 2rem;
+                font-size: 2rem;
+                font-weight: bold;
+                display: none;
+            }
+
+            .breathe {
+                font-weight: 600;
+                animation-name: breathe;
+                animation-duration: 4s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            @keyframes breathe {
+                0% {
+                    font-size: 4rem;
+                }
+                
+                50% {
+                    font-size: 4.15rem;
+                }
+                
+                100% {
+                    font-size: 4rem;
+                }
+                }
+
+        </style>
+    </head>
+    <body>
+        <div style="height: 125px;">
+            <p id="title" class="breathe">Snake Game</p>
+        </div>
+        
+        <div id="buttonsContainer">
+            <button type="button" id="start">Start</button>
+            <button type="button" id="restart">Restart</button>
+        </div>
+        
+      <canvas id="snake" width="608" height="608"></canvas>
+
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <span id="resultSpan">Result here</span>
+      </div>
+    </body>
+</html>
+<script src="script.js"></script>
